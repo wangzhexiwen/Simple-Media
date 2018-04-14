@@ -63,7 +63,7 @@
         <StackPanel Orientation="Vertical">
             <StackPanel>
                 <TextBox Name="mybox"
-                         PlaceholderText="the music url"
+                         PlaceholderText="The music url"
                          Header="输入音频地址"></TextBox>
             </StackPanel>
             <StackPanel>
