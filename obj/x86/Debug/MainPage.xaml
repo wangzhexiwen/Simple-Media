@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="App13.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App13"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="White"
+                Orientation="Horizontal">
+        <StackPanel>
+            <NavigationView x:ConnectionId='3' Width="200"
+                        x:Name="navview"
+                                                                   >
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Content="选取播放文件"
+                                    Tag="search"
+                                    >
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="Read"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="播放"
+                                    Tag="play"
+                                    >
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="Play"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="暂停"
+                                    Tag="pause"
+                                    >
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="Pause"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="停止"
+                                    Tag="stop"
+                                    >
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="Stop"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="播放在线音乐"
+                                        Tag="cloud"
+                                        >
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="Globe"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="本地保存"
+                                        Tag="save"
+                                        >
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="SaveLocal"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationView.MenuItems>
+                <NavigationView.Header >My Player</NavigationView.Header>
+            </NavigationView>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <TextBox x:ConnectionId='2' Name="mybox"
+                         PlaceholderText="the music url"
+                         Header="输入音频地址"></TextBox>
+            </StackPanel>
+            <StackPanel>
+                <MediaElement x:ConnectionId='1' Height="550"
+                      Width="550"
+                      AutoPlay="False"
+                      AreTransportControlsEnabled="True"
+                      HorizontalAlignment="Right"
+                      x:Name='media'
+                      Margin="20,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </StackPanel>
+</Page>
+
